@@ -1,0 +1,113 @@
+Conceptos de Machine Learning:
+
+Gradiente descendiente.
+El rol de la gradiente descendiente en machine learning es encontrar los valores óptimos de los parámetros (por ejemplo, los pesos de un modelo) que minimizan una función de costo o error.
+Lo hace ajustando iterativamente los parámetros en la dirección opuesta al gradiente de la función de costo, permitiendo que el modelo aprenda a realizar mejores predicciones.
+En resumen, es un algoritmo de optimización fundamental para entrenar modelos de machine learning.
+
+HMM (Hidden Markov Model).
+El principal uso de la metodología HMM (Hidden Markov Model, Modelo Oculto de Markov) es modelar secuencias de datos donde el sistema tiene estados ocultos que no se observan directamente, pero que generan observaciones visibles.
+Se utiliza ampliamente para reconocimiento de patrones en secuencias temporales, como:
+
+Reconocimiento de voz
+Procesamiento de lenguaje natural
+Reconocimiento de escritura
+Bioinformática (por ejemplo, alineamiento de secuencias de ADN)
+En resumen, HMM se usa para modelar procesos estocásticos con dependencias temporales y estados ocultos.
+
+SVM y CNN.
+
+SVM (Support Vector Machine):
+
+*Principal uso: Clasificación y regresión.
+*Aplicaciones comunes:
+    -Clasificación de texto (spam/no spam, análisis de sentimientos)
+    -Reconocimiento de imágenes y patrones
+    -Detección de anomalías
+    -Bioinformática (clasificación de genes, proteínas)
+
+CNN (Convolutional Neural Network):
+
+*Principal uso: Procesamiento y análisis de datos con estructura de cuadrícula, especialmente imágenes.
+*Aplicaciones comunes:
+    -Reconocimiento y clasificación de imágenes
+    -Detección y segmentación de objetos en imágenes y videos
+    -Reconocimiento facial
+    -Procesamiento de señales visuales y de audio
+
+En resumen:
+
+SVM se usa principalmente para tareas de clasificación y regresión en datos estructurados.
+CNN es la arquitectura estándar para tareas de visión por computadora y procesamiento de imágenes.
+
+ETL (Extract, Transform, Load).
+
+La principal necesidad de los test ETL (Extract, Transform, Load) es garantizar la calidad, integridad y exactitud de los datos durante todo el proceso de extracción, transformación y carga.
+Estos tests ayudan a detectar errores, inconsistencias o pérdidas de datos, asegurando que los datos procesados y almacenados sean confiables y útiles para el análisis o la toma de decisiones.
+
+Diferencias "Full load" - "Incremental load".
+
+*Full Load:
+
+-Carga todos los datos desde la fuente al destino cada vez.
+-El destino se suele vaciar antes de cargar los datos nuevos.
+-Es más simple, pero consume más tiempo y recursos.
+-Útil cuando los volúmenes de datos son pequeños o se requiere una recarga completa.
+
+*Incremental Load:
+
+-Solo carga los datos nuevos o modificados desde la última carga.
+-El destino no se vacía; solo se agregan o actualizan los cambios.
+-Es más eficiente y rápido, ideal para grandes volúmenes de datos.
+-Requiere mecanismos para identificar los cambios (por ejemplo, marcas de tiempo o claves).
+
+*Resumen:
+
+-Full load reemplaza todo, incremental load solo actualiza lo necesario.
+
+Diferencias "Data warehouse" - "Data lake".
+
+*Data Warehouse:
+
+-Almacena datos estructurados y procesados, listos para análisis y reportes.
+-Usa esquemas definidos (schema-on-write), es decir, los datos se estructuran al ingresar.
+-Optimizado para consultas rápidas y análisis de negocio (BI).
+-Ejemplos: Amazon Redshift, Google BigQuery, Snowflake.
+
+*Data Lake:
+
+-Almacena datos en bruto (sin procesar), incluyendo datos estructurados, semiestructurados y no estructurados.
+-Usa esquema flexible (schema-on-read), es decir, los datos se estructuran al ser leídos.
+-Ideal para almacenar grandes volúmenes de datos de cualquier tipo, incluso antes de saber cómo se analizarán.
+-Ejemplos: Amazon S3, Azure Data Lake, Hadoop HDFS.
+
+*Resumen:
+
+-Data warehouse es para datos limpios y estructurados listos para análisis;
+-Data lake es para almacenar cualquier tipo de dato en bruto, sin procesar, para análisis futuros.
+
+Diferencias "Batch processing" - "Stream processing".
+
+*Batch Processing:
+
+-Procesa grandes volúmenes de datos acumulados en intervalos de tiempo definidos (por lotes).
+-Los datos se recopilan, almacenan y luego se procesan juntos.
+-Es ideal para cargas periódicas, reportes diarios, migraciones, etc.
+-Ejemplo: Procesar todas las transacciones de un día cada noche.
+
+*Stream Processing:
+
+-Procesa los datos en tiempo real o casi en tiempo real, a medida que llegan.
+-Permite análisis y acciones inmediatas sobre los datos.
+-Es ideal para monitoreo en tiempo real, detección de fraudes, análisis de logs, etc.
+-Ejemplo: Procesar cada transacción bancaria en el momento en que ocurre.
+
+*Resumen:
+
+-Batch processing es por lotes y no inmediato;
+-Stream processing es continuo y en tiempo real.
+
+Data lineage.
+
+Data lineage se refiere al rastreo del origen, movimiento y transformación de los datos a lo largo de su ciclo de vida, desde su fuente original hasta su destino final.
+Permite saber de dónde vienen los datos, cómo han sido modificados y a dónde van, facilitando la auditoría, la trazabilidad, la calidad y la confianza en los datos dentro de procesos ETL y análisis de datos.
